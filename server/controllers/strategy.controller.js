@@ -1,8 +1,8 @@
-const { Example } = require('../models/strategy.model');
+const { Strategy } = require('../models/strategy.model');
 
 //Find All
 module.exports.findAllStrategies = (req, res) => {
-    Example.find({})
+    Strategy.find({})
         .then(allStrategies => res.json(allStrategies))
         .catch(err => res.json({ message: 'Something went wrong', error: err }));
 }
