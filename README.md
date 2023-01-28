@@ -5,7 +5,7 @@
   <a href="https://github.com/LexCarey/Valorant_Strategy_Roulette">
   </a>
 
-<h3 align="center">INVRT</h3>
+<h3 align="center">Valorant Strategy Roulette</h3>
 
   <p align="center">
     Valorant Strategy Roulette is a website that provides randomly generated strategies for users to try out in the game Valorant.
