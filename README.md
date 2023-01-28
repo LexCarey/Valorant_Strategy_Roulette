@@ -64,9 +64,7 @@ Valorant Strategy Roulette is a website for Valorant players who are bored with 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Important: Most features require an exact copy of my database structure (which I don't have publically available), meaning a majority of the functions will not work on your local copy. I reccomend checking out the <a href="https://invrtofficial.com/">live site</a> if you'd like to see everything in action.
-
-If you would still like to run a local copy, you can follow the steps below.
+If you would like to run a local copy, follow the steps below.
 
 ### Prerequisites
 
