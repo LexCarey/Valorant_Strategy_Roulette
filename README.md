@@ -127,7 +127,7 @@ Your local copy should now be running on [http://localhost:5000/](http://localho
 ## Roadmap
 
 - [ ] Design base layout.
-- [ ] Generate new strategies on user command.
+- [ ] Display new strategy when.
 - [ ] Let users select their agents and map so only possible strategies will be generated.
 - [ ] Give users the ability to favorite strategies.
 
