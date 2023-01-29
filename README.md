@@ -113,19 +113,11 @@ Your local copy should now be running on [http://localhost:5000/](http://localho
 <!-- DEMOS EXAMPLES -->
 ## Demos
 
-### Browsing Items:
-
 ![](flask_app/static/all_imgs/readme_display.gif)
-
-### Adding to Cart:
 
 ![](flask_app/static/all_imgs/readme_cart.gif)
 
-### Checking out:
-
 ![](flask_app/static/all_imgs/readme_checkout.gif)
-
-_You can check out the site here if you would like to test any features for yourself: [Live Site](https://invrtofficial.com/)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,15 +126,10 @@ _You can check out the site here if you would like to test any features for your
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Complete user checkout flow.
-- [x] Add support tabs (About, Contact, Returns, Privacy Policy)
-- [x] Create a more inviting & interactive home page.
-- [x] Make stock automatically drop whenever an item is purchased. (Previously had to manually change stock upon purchase)
-- [ ] Update "Current Drop" tab to "Current Drops" tab, letting all in stock drops show up instead of just the most recent drop.
-- [ ] Show that a product is soldout on the drop tab instead of just the individual product page.
-- [ ] Add support for more clothing items:
-    - [ ] Hoodies
-    - [ ] Hats
+- [ ] Design base layout.
+- [ ] Generate new strategies on user command.
+- [ ] Let users select their agents and map so only possible strategies will be generated.
+- [ ] Give users the ability to favorite strategies.
 
 See the [open issues](https://github.com/LexCarey/Valorant_Strategy_Roulette/issues) for a full list of proposed features (and known issues).
 
