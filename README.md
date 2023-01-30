@@ -130,7 +130,7 @@ Your local copy should now be running on [http://localhost:5000/](http://localho
 Immediate Goals:
 - [ ] Design base layout.
 - [ ] Display new strategy when requested.
-- [ ] Let users select their agents and map so only possible strategies will be generated.
+- [ ] Let users select their agents and map, making sure only possible strategies will generate.
 
 
 Long Term Goals:
