@@ -131,7 +131,7 @@ Immediate Goals:
 - [ ] Display new strategy when.
 - [ ] Let users select their agents and map so only possible strategies will be generated.
 
-Long Term Goals
+Long Term Goals:
 - [ ] Give users the ability to favorite strategies.
 - [ ] Create a user submitted strategies section.
 
