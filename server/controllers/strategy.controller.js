@@ -2,19 +2,9 @@ const { Strategy } = require('../models/strategy.model');
 
 //Find All
 module.exports.findAllStrategies = (req, res) => {
-    Strategy.find({})
+    Strategy.find()
         .then(allStrategies => res.json(allStrategies))
         .catch(err => res.json({ message: 'Something went wrong', error: err }));
-}
-
-// Create
-module.exports.createStrategy = (req, res) => {
-    const {  } = req.body;
-    Strategy.create({
-        
-    })
-    .then(strategy => res.json(strategy))
-    .catch(err => res.status(400).json(err))
 }
 
 // Find One
@@ -24,9 +14,26 @@ module.exports.getStrategy = (req, res) => {
         .catch(err => res.json(err))
 }
 
+// Create
+module.exports.createStrategy = (req, res) => {
+    const { title, strat, agents, maps } = req.body;
+    Strategy.create({
+        title,
+        strat,
+        agents,
+        maps
+    })
+    .then(strategy => res.json(strategy))
+    .catch(err => res.status(400).json(err))
+}
+
 // Update
 module.exports.updateStrategy = (req, res) => {
-    Strategy.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
+    Strategy.findOneAndUpdate(
+        {_id: req.params.id}, 
+        req.body, 
+        {new: true, runValidators: true}
+        )
         .then(updatedStrategy => res.json(updatedStrategy))
         .catch(err => res.status(400).json(err))
 }

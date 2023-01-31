@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost/INSET_DB_HERE", {
+mongoose.connect("mongodb://localhost/val_roulette", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
