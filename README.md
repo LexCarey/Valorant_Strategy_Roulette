@@ -126,10 +126,16 @@ Your local copy should now be running on [http://localhost:5000/](http://localho
 <!-- ROADMAP -->
 ## Roadmap
 
+
+Immediate Goals:
 - [ ] Design base layout.
-- [ ] Display new strategy when.
-- [ ] Let users select their agents and map so only possible strategies will be generated.
+- [ ] Display new strategy when requested.
+- [ ] Let users select their agents and map, making sure only possible strategies will generate.
+
+
+Long Term Goals:
 - [ ] Give users the ability to favorite strategies.
+- [ ] Create a user submitted strategies section.
 
 See the [open issues](https://github.com/LexCarey/Valorant_Strategy_Roulette/issues) for a full list of proposed features (and known issues).
 
