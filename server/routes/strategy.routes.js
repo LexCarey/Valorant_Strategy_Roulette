@@ -6,4 +6,5 @@ module.exports = function(app){
     app.post('/api/strategies', StrategyController.createStrategy)
     app.put('/api/strategies/:id', StrategyController.updateStrategy)
     app.delete('/api/strategies/:id', StrategyController.deleteStrategy)
+    app.get('/api/agent-strategies/:agents/:maps', StrategyController.findStrategyByAgentAndMap)
 }
