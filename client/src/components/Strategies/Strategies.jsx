@@ -7,10 +7,12 @@ const Strategies = () => {
     const [Strategies, setStrategies] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/strategies')
+        axios.get('http://localhost:8000/api/agent-strategies/Astra Viper/Lotus')
         .then(res => setStrategies(res.data))
         .catch(err => console.log(err))
     }, [])
+
+
 
     return (
         <div className=''>

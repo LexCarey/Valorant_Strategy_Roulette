@@ -1,0 +1,11 @@
+.agentImage {
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+}
+
+.agentImage:hover {
+    -webkit-filter: drop-shadow(-5px 5px red);
+    filter: drop-shadow(-5px 5px red);
+    transform: translateX(5px) translateY(-5px);
+}
