@@ -29,3 +29,8 @@ body{
 .red-font{
     color: rgb(184, 77, 77);
 }
+
+.container {
+    margin: 0 auto;
+    width: 1100px;
+}

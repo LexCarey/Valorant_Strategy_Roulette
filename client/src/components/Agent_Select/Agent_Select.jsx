@@ -14,18 +14,18 @@ const Agent_Select = () => {
     }, [])
 
     return (
-        <div className=''>
+        <div className='agentIcons'>
             
             {
                 Agents != "" ?
                     Agents.map((entry, i) =>
-                        <tr key={i} style={{color: "white", fontFamily: "valorant"}}>
+                        <div key={i} style={{color: "white", fontFamily: "valorant"}}>
                             <img className='agentImage' src={entry.displayIcon} alt={entry.displayName} />
                             <br/>
                             {entry.displayName}
                             <br/>
                             <br/>
-                        </tr>
+                        </div>
                     )
                 :
                 <h1>Loading...</h1>

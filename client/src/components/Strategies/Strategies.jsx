@@ -15,7 +15,7 @@ const Strategies = () => {
     return (
         <div className=''>
             {
-                Strategies.map((entry, i) =>
+                /* Strategies.map((entry, i) =>
                     <tr key={i} style={{color: "white"}}>
                         {entry.title}
                         <br/>
@@ -27,7 +27,7 @@ const Strategies = () => {
                         <br/>
                         <br/>
                     </tr>
-                )
+                ) */
             }
         </div>
     )

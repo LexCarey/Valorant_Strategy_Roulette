@@ -9,9 +9,11 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
-            <Strategies></Strategies>
-            <Agent_Select></Agent_Select>
-            <Map_Select></Map_Select>
+            <div className='container'>
+                <Strategies></Strategies>
+                <Agent_Select></Agent_Select>
+                <Map_Select></Map_Select>
+            </div>
         </div>
     )
 }

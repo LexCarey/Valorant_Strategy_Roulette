@@ -13,17 +13,17 @@ const Map_Select = () => {
     }, [])
 
     return (
-        <div className=''>
+        <div style={{width: "100%"}}>
             
             {
                 Maps != "" ?
                     Maps.map((entry, i) =>
-                        <tr key={i} style={{color: "white", fontFamily: "valorant"}}>
-                            {entry.displayName}
-                            <img style={{height: "200px"}} src={entry.listViewIcon} alt={entry.displayName} />
+                        <div className='mapContainer' key={i} style={{color: "white", fontFamily: "valorant", width: "100%"}}>
+                            <img style={{width: "100%"}} src={entry.listViewIcon} alt={entry.displayName} />
+                            <h1 className='mapText'>{entry.displayName}</h1>
                             <br/>
                             <br/>
-                        </tr>
+                        </div>
                     )
                 :
                 <h1>Loading...</h1>
