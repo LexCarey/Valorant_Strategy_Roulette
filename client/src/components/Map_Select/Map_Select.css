@@ -4,12 +4,15 @@
     color: white;
 }
 
+.mapContainer:hover {
+cursor: pointer;
+}
+
 .mapText {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
     font-size: 75px;
     -webkit-text-stroke: 1px black;
 }
