@@ -27,7 +27,7 @@
 
 .mini-agent-select {
     width: 50px;
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .mini-agents {
@@ -38,6 +38,7 @@
     position: absolute;
     z-index: 9999;
     background-color: rgba(16, 16, 16, 0.802);
+
 }
 
 .selected-agent {

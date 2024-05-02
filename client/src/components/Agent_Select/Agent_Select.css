@@ -6,9 +6,9 @@
 }
 
 .agentImage:hover {
-    -webkit-filter: drop-shadow(-5px 5px red);
-    filter: drop-shadow(-5px 5px red);
-    transform: translateX(5px) translateY(-5px);
+    -webkit-filter: drop-shadow(-2px 2px red);
+    filter: drop-shadow(-2px 2px red);
+    transform: translateX(2px) translateY(-2px);
 }
 
 .agentIcons {

@@ -25,8 +25,9 @@ const Agent_Choice = (props) => {
                     <h1 className='plus'>+</h1>
                 }
             </div>
-            <div className='mini-agents'>
             { agentMenu &&
+            <div className='mini-agents'>
+                {
                 agents.map((entry, i) =>
                 <div className='mini-agent-select' key={i} style={{color: "white", fontFamily: "valorant"}} onClick={(e) => agentSelect(entry)}>
                     <img className='agentImage' src={entry.displayIcon} alt={entry.displayName} />
@@ -36,8 +37,9 @@ const Agent_Choice = (props) => {
                     <br/>
                 </div>
                 )
-            }
+                }
             </div>
+            }
         </div>
     )
 }
