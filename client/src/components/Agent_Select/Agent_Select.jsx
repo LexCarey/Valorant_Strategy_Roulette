@@ -1,35 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import './Agent_Select.css'
-import axios from 'axios'
+import Agent_Choice from '../Agent_Choice/Agent_Choice'
 
 
-const Agent_Select = () => {
-    const [Agents, setAgents] = useState([])
-
-    useEffect(()=>{
-        axios.get('https://valorant-api.com/v1/agents?isPlayableCharacter=true')
-
-        .then(res => setAgents(res.data.data))
-        .catch(err => console.log(err))
-    }, [])
+const Agent_Select = (props) => {
+    const {agents} = props
 
     return (
         <div className='agentIcons'>
-            
-            {
-                Agents != "" ?
-                    Agents.map((entry, i) =>
-                        <div key={i} style={{color: "white", fontFamily: "valorant"}}>
-                            <img className='agentImage' src={entry.displayIcon} alt={entry.displayName} />
-                            <br/>
-                            {entry.displayName}
-                            <br/>
-                            <br/>
-                        </div>
-                    )
-                :
-                <h1>Loading...</h1>
-            }
+            <Agent_Choice agents = {agents}></Agent_Choice>
+            <Agent_Choice agents = {agents}></Agent_Choice>
+            <Agent_Choice agents = {agents}></Agent_Choice>
+            <Agent_Choice agents = {agents}></Agent_Choice>
+            <Agent_Choice agents = {agents}></Agent_Choice>
         </div>
     )
 }

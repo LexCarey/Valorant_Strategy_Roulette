@@ -1,0 +1,45 @@
+.agent-choice {
+    width: 150px;
+    height: 150px;
+    border: red 5px solid;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.agent-choice:hover {
+    cursor: pointer;
+}
+
+.plus {
+    transition: all 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.agent-choice:hover .plus{
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.mini-agent-select {
+    width: 50px;
+    font-size: 10px;
+}
+
+.mini-agents {
+    display: flex;
+    width: 160px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 9999;
+    background-color: rgba(16, 16, 16, 0.802);
+}
+
+.selected-agent {
+    height: 100%;
+}

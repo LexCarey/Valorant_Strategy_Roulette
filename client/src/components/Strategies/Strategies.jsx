@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import './Strategies.css'
-import axios from 'axios'
 
 
-const Strategies = () => {
-    const [Strategies, setStrategies] = useState([])
-
-    useEffect(()=>{
-        axios.get('http://localhost:8000/api/agent-strategies/Astra/Lotus')
-        .then(res => setStrategies(res.data))
-        .catch(err => console.log(err))
-    }, [])
+const Strategies = (props) => {
+    const {strats} = props
 
     return (
         <div className=''>
-            {
-                /* Strategies.map((entry, i) =>
+            { 
+                strats.map((entry, i) =>
                     <tr key={i} style={{color: "white"}}>
                         {entry.title}
                         <br/>
@@ -27,7 +20,7 @@ const Strategies = () => {
                         <br/>
                         <br/>
                     </tr>
-                ) */
+                )
             }
         </div>
     )
