@@ -76,3 +76,9 @@ module.exports.findStrategyByAgentAndMap = (req, res) => {
     .then(strategy => res.json(strategy))
     .catch(err => res.json(err))
 }
+
+module.exports.randomStrategy = (req, res)=>{
+    Strategy.aggregate([{ $sample: { size: 1 } }])
+        .then(strategy=>res.json(strategy))
+        .catch(err=>res.status(400).json(err))
+}
