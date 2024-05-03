@@ -17,7 +17,7 @@ const Agent_Choice = (props) => {
 
     return (
         <div>
-            <div className='agent-choice' onClick={agentMenuTrue}>
+            <div className='agent-choice'  onClick={agentMenuTrue}>
                 {
                     selectedAgent ?
                     <img className='selected-agent' src={selectedAgent.displayIcon} alt={selectedAgent.displayName} />

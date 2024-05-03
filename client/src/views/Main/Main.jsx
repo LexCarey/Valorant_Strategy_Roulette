@@ -12,8 +12,8 @@ const Main = () => {
     const [agents, setAgents] = useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:8000/api/agent-strategies/Astra/Lotus')
-        .then(res => setStrats(res.data))
+        axios.get('http://localhost:8000/api/strategy/random')
+        .then(res => setStrats(res.data[0]))
         .catch(err => console.log(err))
     }, [])
 
