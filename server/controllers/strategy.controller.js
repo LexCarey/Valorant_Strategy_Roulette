@@ -47,32 +47,41 @@ module.exports.deleteStrategy = (req, res) => {
 
 // Find By Agent and Map
 module.exports.findStrategyByAgentAndMap = (req, res) => {
-    let agentsVar = []
+    let selectedAgents = []
     let tempString = ""
     for (i in req.params.agents) {
         if (req.params.agents[i] == " ") {
-            agentsVar.push(tempString)
+            selectedAgents.push(tempString)
             tempString = ""
         }else {
             tempString += req.params.agents[i]
         }
     }
-    agentsVar.push(tempString)
+    selectedAgents.push(tempString)
     tempString = ""
 
-    let mapsVar = []
+    let selectedMaps = []
     tempString = ""
     for (i in req.params.maps) {
         if (req.params.maps[i] == " ") {
-            mapsVar.push(tempString)
+            selectedMaps.push(tempString)
             tempString = ""
         }else {
             tempString += req.params.maps[i]
         }
     }
-    mapsVar.push(tempString)
+    selectedMaps.push(tempString)
 
-    Strategy.find({agents: { $all: agentsVar }, maps: { $all: mapsVar }})
+    console.log(selectedAgents)
+    console.log(selectedMaps)
+
+    Strategy.find({
+        agents: { $not: { $elemMatch: { $nin: selectedAgents } } },
+        $or: [
+            { maps: { $in: selectedMaps } },
+            { maps: { $size: 0 } }
+        ]
+    })
     .then(strategy => res.json(strategy))
     .catch(err => res.json(err))
 }

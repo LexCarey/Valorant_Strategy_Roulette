@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Agent_Choice.css'
 
 const Agent_Choice = (props) => {
-    const {agents} = props
+    const {agents, setAgent, agentSelected} = props
     const [agentMenu, setagentMenu] = useState(false)
     const [selectedAgent, setSelectedAgent] = useState(false)
 
@@ -10,9 +10,10 @@ const Agent_Choice = (props) => {
         setagentMenu(!agentMenu)
     }
 
-    let agentSelect = (agent = []) => {
+    let agentSelect = (thisAgent = []) => {
         setagentMenu(!agentMenu)
-        setSelectedAgent(agent)
+        setSelectedAgent(thisAgent)
+        setAgent(thisAgent.displayName)
     }
 
     return (
@@ -29,7 +30,7 @@ const Agent_Choice = (props) => {
             <div className='mini-agents'>
                 {
                 agents.map((entry, i) =>
-                <div className='mini-agent-select' key={i} style={{color: "white", fontFamily: "valorant"}} onClick={(e) => agentSelect(entry)}>
+                <div className='mini-agent-select' key={i} style={{color: "white", fontFamily: "valorant"}} onClick={() => agentSelect(entry)}>
                     <img className='agentImage' src={entry.displayIcon} alt={entry.displayName} />
                     <br/>
                     {entry.displayName}

@@ -5,7 +5,7 @@ import './Strategies.css'
 const Strategies = (props) => {
     const {strats} = props
 
-    console.log(strats)
+
 
     return (
         <div className='strategy' style={{color: "white"}}>

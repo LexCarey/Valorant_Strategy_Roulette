@@ -10,6 +10,8 @@ const Main = () => {
     const [strats, setStrats] = useState([])
     const [maps, setMaps] = useState([])
     const [agents, setAgents] = useState([])
+    const [selectedMaps, setSelectedMaps] = useState("")
+    const [selectedAgents, setSelectedAgents] = useState("")
 
     useEffect(()=>{
         axios.get('http://localhost:8000/api/strategy/random')
@@ -29,13 +31,21 @@ const Main = () => {
         .catch(err => console.log(err))
     }, [])
 
+    async function fetchData() {
+        let url = 'http://localhost:8000/api/agent-strategies/' + selectedAgents + '/' + selectedMaps
+        axios.get(url)
+        .then(res => setStrats(res.data[Math.floor(Math.random() * (res.data.length))]))
+        .catch(err => console.log(err))
+    }
+
     return (
         <div>
             <Header></Header>
             <div className='container'>
                 <Strategies strats = {strats}></Strategies>
-                <Agent_Select agents = {agents}></Agent_Select>
-                <Map_Select maps = {maps}></Map_Select>
+                <Agent_Select agents = {agents} setSelectedAgents = {setSelectedAgents}></Agent_Select>
+                <Map_Select maps = {maps} setSelectedMaps = {setSelectedMaps}></Map_Select>
+            <button onClick={() => fetchData()} style={{width: "200px", height: "100px"}}></button>
             </div>
         </div>
     )

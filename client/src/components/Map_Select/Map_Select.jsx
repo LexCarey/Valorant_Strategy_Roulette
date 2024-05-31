@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 const Map_Select = (props) => {
-    const {maps} = props
+    const {maps, setSelectedMaps} = props
     const [mapMenu, setmapMenu] = useState(false)
     const [selectedmap, setSelectedmap] = useState(false)
 
@@ -15,6 +15,7 @@ const Map_Select = (props) => {
     let mapSelect = (map = []) => {
         setmapMenu(!mapMenu)
         setSelectedmap(map)
+        setSelectedMaps(map.displayName)
     }
 
     return (
