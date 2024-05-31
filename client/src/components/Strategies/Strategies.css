@@ -1,3 +1,32 @@
 .strategy{
+    color: black;
     text-align: center;
+    background-color: #e3ddd8;
+    height: 400px;
+    margin-top: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.7);
+    text-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.requiredAgentsMaps {
+    display: flex;
+    justify-content: space-between;
+    color: #0000002a;
+    font-size: .75em;
+}
+
+.title{
+    font-size: 3.2em;
+    margin-bottom: 15px;
+}
+
+.fullStrat{
+    max-width: 850px;
+    margin: 0 auto;
+    overflow-wrap: break-word;
 }

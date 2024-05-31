@@ -18,8 +18,8 @@ cursor: pointer;
 }
 
 .map-choice {
-    height: 239px;
-    border: red 5px solid;
+    height: 200px;
+    border: rgb(214, 50, 50) 5px solid;
     position: relative;
     text-align: center;
     color: white;
@@ -50,5 +50,5 @@ cursor: pointer;
 
 .map-image-cover{
     object-fit: cover;
-    height: 239px;
+    height: 200px;
 }

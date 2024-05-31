@@ -8,16 +8,25 @@ const Strategies = (props) => {
 
 
     return (
-        <div className='strategy' style={{color: "white"}}>
-            <h1 >{strats.title}</h1>
-            <br/>
-            <h1>{strats.strat}</h1>
-            <br/>
-            <h1>{strats.agents}</h1>
-            <br/>
-            <h1>{strats.maps}</h1>
-            <br/>
-            <br/>
+        <div className='strategy'>
+            <div className='fullStrat'>
+                <h1 className='title'>{strats.title}</h1>
+                <h1 className='description'>{strats.strat}</h1>
+            </div>
+            
+            
+            <div className='requiredAgentsMaps'>
+            { Array.isArray(strats.agents) && strats.agents.length > 0 &&
+                    <h1>Required Agents: {strats.agents.map((s, i) => (
+                        <span>{s}{(strats.agents.length - 1 !== i) && ', '}</span>
+                    ))}</h1>
+                }
+                { Array.isArray(strats.maps) && strats.maps.length > 0 &&
+                    <h1>Maps: {strats.maps.map((s, i) => (
+                        <span>{s}{(strats.maps.length - 1 !== i) && ', '}</span>
+                    ))}</h1>
+                }
+            </div>
         </div>
     )
 }

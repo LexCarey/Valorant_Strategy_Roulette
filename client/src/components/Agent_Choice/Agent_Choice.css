@@ -1,7 +1,7 @@
 .agent-choice {
     width: 150px;
     height: 150px;
-    border: red 5px solid;
+    border: rgb(214, 50, 50) 5px solid;
     position: relative;
     text-align: center;
     color: white;
