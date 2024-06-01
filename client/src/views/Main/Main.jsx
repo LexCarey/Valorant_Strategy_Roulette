@@ -45,7 +45,7 @@ const Main = () => {
                 <Strategies strats = {strats}></Strategies>
                 <Agent_Select agents = {agents} setSelectedAgents = {setSelectedAgents}></Agent_Select>
                 <Map_Select maps = {maps} setSelectedMaps = {setSelectedMaps}></Map_Select>
-            <button onClick={() => fetchData()} style={{width: "100%", height: "25px", display: "none"}}></button>
+            <button onClick={() => fetchData()} style={{width: "100%", height: "25px"}}></button>
             </div>
         </div>
     )
